@@ -1,4 +1,4 @@
-# ⭐ MapleStory M - Starforce Niveau 17 Cost Tracker
+# ⭐ MapleStory M - Starforce lvl 17 Cost Tracker
 
 A web application to track the cost of Starforce Level 17 upgrades in MapleStory M. Calculate average upgrade costs, monitor spending patterns, and import historical data from your notes.
 
