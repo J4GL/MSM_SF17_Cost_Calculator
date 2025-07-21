@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Calculateur Starforce 17 - MapleStory M</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>⭐ MapleStory M - Starforce Niveau 17</h1>
+
+            <div class="card">
+                <h2>Nouvelle Session</h2>
+                <div class="input-group">
+                    <label for="startingMoney">Argent de départ:</label>
+                    <input
+                        type="number"
+                        id="startingMoney"
+                        placeholder="Entrez votre argent de départ"
+                    />
+                    <button onclick="startNewSession()">Commencer</button>
+                </div>
+            </div>
+
+            <div class="card" id="sessionCard" style="display: none">
+                <h2>Session Active</h2>
+                <div class="stats">
+                    <div class="stat">
+                        <span class="label">Argent de départ:</span>
+                        <span id="initialAmount">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="label">Nombre d'améliorations:</span>
+                        <span id="upgradeCount">0</span>
+                    </div>
+
+                    <div class="stat">
+                        <span class="label">Argent actuel:</span>
+                        <span id="currentAmount">0</span>
+                    </div>
+
+                    <div class="stat highlight">
+                        <span class="label">Coût moyen par amélioration:</span>
+                        <span id="averageCost">0</span>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="currentMoney">Argent après amélioration:</label>
+                    <input
+                        type="number"
+                        id="currentMoney"
+                        placeholder="Entrez votre argent actuel"
+                    />
+                    <button onclick="recordUpgrade()">
+                        Enregistrer Amélioration
+                    </button>
+                </div>
+
+                <button onclick="resetSession()" class="reset-btn">
+                    Nouvelle Session
+                </button>
+            </div>
+
+            <div class="card">
+                <h2>Statistiques Globales - Starforce 17</h2>
+                <div class="global-stats">
+                    <div class="stat">
+                        <span class="label">Nombre total d'améliorations:</span>
+                        <span id="totalUpgrades">0</span>
+                    </div>
+
+                    <div class="stat">
+                        <span class="label">Coût total dépensé:</span>
+                        <span id="totalCost">0</span>
+                    </div>
+                    <div class="stat success">
+                        <span class="label">Coût minimum:</span>
+                        <span id="minCost">-</span>
+                    </div>
+                    <div class="stat danger">
+                        <span class="label">Coût maximum:</span>
+                        <span id="maxCost">-</span>
+                    </div>
+                    <div class="stat highlight">
+                        <span class="label"
+                            >Moyenne totale (toutes sessions):</span
+                        >
+                        <span id="globalAverage">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Historique des Sessions</h2>
+                <div id="upgradeHistory"></div>
+                <button onclick="clearHistory()" class="clear-btn">
+                    Vider l'historique
+                </button>
+            </div>
+
+            <div class="card">
+                <h2>Import des Notes</h2>
+                <div class="import-section">
+                    <textarea
+                        id="importData"
+                        placeholder="Collez vos données ici pour les importer...
+Format accepté:
+156 754 642
+136 589 642
+85 819 642
+--------------
+821 590 556
+810 698 566"
+                    ></textarea>
+                    <button onclick="importData()">
+                        📤 Importer les données
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
